@@ -1,0 +1,6 @@
+/*XPATH*/
+/*XPATH des url de la recherche Google */
+//h3[@class='r']/a/@href
+
+/*XPATH des recherches sur import.io dans les importxml*/
+/html/body/table/tbody/tr

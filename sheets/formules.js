@@ -1,0 +1,5 @@
+// importer tout l'HTML d'une page
+=concatenate(importdata(B2))
+//Importer à partir d'un deux sociétés l'URL societe.com 
+//en brut : 
+=CONCATENATE("http://www."; REGEXEXTRACT(IMPORTXML(CONCATENATE("https://api.import.io/store/data/2eec56ee-80cc-40dc-9762-2d695a6feae3/_query?input/webpage/url=http%3A%2F%2Fwww.bing.com%2Fsearch%3Fq%3D";concatenate(REGEXREPLACE(left(iferror(if(find("Voir toutes ";"")>0;"");"MICHAEL PAGE INTERNATIONAL Voir plus d'infos sur la société Voir toutes les  offres");find(" Voir ";iferror(if(find("Voir toutes ";"")>0;"");"MICHAEL PAGE INTERNATIONAL Voir plus d'infos sur la société Voir toutes les  offres")));"\s";"+");"%22+site%3Asociete.com%2Fsociete");"&format=HTML&_user=16ad9634-a254-40dc-a013-e5f516b5bd44&_apikey=tegOxyb2c3lWIPWbnW933ElYaEsn50J1xbMjpynuh7D7ue7AloEdOY7o4tv0DR1ljhvg63nXcWLmtz9PjeEp%2BQ%3D%3D");"/html/body/table/tbody/tr[1]/td[3]");"(?:https?:\/\/)(?:[\w]+\.)([a-zA-Z\.]{2,63})([\/\w\.-]*)*\/?"))
